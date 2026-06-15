@@ -6,51 +6,122 @@
     <title>Choquei CEP</title>
     
     <style>
-        /* Adiciona a imagem de fundo em toda a página */
-        article img {
-            width: 250px; /* Define a largura maior (coloque o valor que desejar) */
-            height: 250px; /* Define a altura */
-            object-fit: cover; /* Evita que a foto fique esticada ou distorcida */
-        }
         body {
-            background-image: url('gi.png'); /* Substitua pelo nome ou link da sua imagem */
-            background-size: cover;       /* Faz a imagem cobrir a tela inteira */
-            background-position: center;  /* Centraliza a imagem */
-            background-attachment: fixed; /* Mantém o fundo fixo ao rolar a página */
-            margin: 0;                    /* Remove margens padrão do navegador */
-            font-family: Arial, sans-serif;
+            background-image: url('gi.png'); 
+            background-size: cover;       
+            background-position: center;  
+            background-attachment: fixed; 
+            margin: 0;                    
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f4f6f9; /* Fundo reserva caso a imagem falhe */
         }
 
         header {
-            background-color: #db1d1d;
-            color: #FFFFFF;
+            background-color: #0f172a; /* Azul escuro profundo/slate */
+            color: #ffffff;
             text-align: center;
             max-width: 800px;
-            margin: 0 auto;
-            padding: 16px;
+            margin: 20px auto 0 auto;
+            padding: 24px 16px;
+            border-radius: 12px 12px 0 0; /* Bordas arredondadas no topo */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0 0 8px 0;
+            font-size: 2.2rem;
+            letter-spacing: -0.5px;
+        }
+
+        header p {
+            margin: 0;
+            color: #94a3b8; /* Texto secundário azulado suave */
+            font-size: 1rem;
         }
 
         main {
-            background-color: rgba(255, 255, 255, 0.9); /* Branco com leve transparência para o fundo aparecer */
-            color: #ff0e06;
-            max-width: 832px; /* Alinha com o tamanho do header + padding */
-            margin: 0 auto;
-            padding: 16px;
+            background-color: rgba(255, 255, 255, 0.96); /* Mais opaco para melhor leitura */
+            color: #1e293b; /* Texto principal quase preto, menos agressivo */
+            max-width: 800px; /* Alinhado perfeitamente com o header */
+            margin: 0 auto 40px auto;
+            padding: 32px 24px;
+            border-radius: 0 0 12px 12px; /* Bordas arredondadas embaixo */
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            box-sizing: border-box;
         }
 
         article {
             display: flex;
-            margin-bottom: 20px;
-            gap: 15px; /* Cria espaço entre a imagem e o texto */
+            margin-bottom: 32px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid #e2e8f0; /* Linha divisória sutil entre posts */
+            gap: 20px; 
         }
 
-        img {
-            width: 80px;
-            height: 80px;
+        article:last-child {
+            border-bottom: none; /* Remove a linha do último post */
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        article img {
+            width: 140px; 
+            height: 140px; 
+            object-fit: cover; 
+            border-radius: 8px; /* Cantos arredondados nas fotos */
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        article h2 {
+            margin: 0 0 8px 0;
+            font-size: 1.3rem;
+            color: #0f172a;
+            line-height: 1.4;
+        }
+
+        article h2:hover {
+            color: #2563eb; /* Título muda de cor ao passar o mouse */
+            cursor: pointer;
         }
 
         .artigo-autor {
-            font-weight: bold;
+            font-size: 0.85rem;
+            color: #64748b; /* Cor de autor mais discreta */
+            margin: 0 0 12px 0;
+        }
+
+        article p:not(.artigo-autor) {
+            font-size: 1rem;
+            color: #334155;
+            line-height: 1.5;
+            margin: 0 0 16px 0;
+        }
+
+        /* Estilização moderna dos botões de reação */
+        button {
+            background-color: #f1f5f9;
+            border: 1px solid #e2e8f0;
+            padding: 6px 14px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.95rem;
+            transition: all 0.2s ease;
+            margin-right: 8px;
+            color: #1e293b;
+        }
+
+        button:hover {
+            background-color: #e2e8f0;
+            transform: translateY(-1px);
+        }
+
+        button:active {
+            transform: translateY(1px);
+        }
+
+        button span {
+            margin-left: 6px;
+            font-weight: 600;
         }
     </style>
 </head>
@@ -78,7 +149,7 @@
             <div>
                 <h2>GATINHA É ENCONTRADA AOS REDORES DO CEP!!!</h2>
                 <p class="artigo-autor">Por: Cicero</p>
-                <p>Uma gatinha em sutação de rua foi encontrada passando frio aos redores do cep!! Quem quiser adotar entre em contato em +55 67676767</p>
+                <p>Uma gatinha em situação de rua foi encontrada passando frio aos redores do cep!! Quem quiser adotar entre em contato em +55 67676767</p>
                 <button>🍑<span>0</span></button>
                 <button>💦<span>0</span></button>
             </div>
