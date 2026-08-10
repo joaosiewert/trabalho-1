@@ -124,13 +124,15 @@
             font-weight: 600;
         }
 
-    .classeimagem {
-        display: block;
-        margin: auto;
-        width: auto;
-        height: auto;
-        max-width: 90vw;
-    }
+        /* CORREÇÃO: Nome da classe corrigido para bater com o HTML e tamanho aumentado */
+        .imagemclasse {
+            display: block;
+            margin: 15px auto;
+            width: 100%; /* Ocupa toda a largura disponível do feed */
+            max-width: 100%; 
+            height: auto; /* Mantém a proporção sem distorcer */
+            border-radius: 8px;
+        }
 
     </style>
 </head>
@@ -170,9 +172,9 @@
                 <h2>ET BILU VAI AO CEP E DEIXA RECOMENDAÇÕES IMPORTANTES</h2>
                 <p class="artigo-autor">Por: Casimiro</p>
                 <p>ET BILU CONFIRMA A CHEGADA DOS ALIENS NA TERRA CAUSA PÂNICO NO CEP</p>
-            </ul>
                 <button>🍑<span>0</span></button>
                 <button>💦<span>0</span></button>
+            </div>
         </article>
 
         <article>
@@ -197,11 +199,10 @@
             </div>
         </article>
 
-        <article>
-            <img src="imagemclasse.png"
-            alt="Uso excessivo do celular"
-            class="imagemclasse">
-            </article>
+        <!-- CORREÇÃO: Adicionado uma estrutura correta de artigo para a foto -->
+        <article style="display: block;"> 
+            <img src="imagemclasse.png" alt="Uso excessivo do celular" class="imagemclasse">
+        </article>
     </main>
 
     <script>
